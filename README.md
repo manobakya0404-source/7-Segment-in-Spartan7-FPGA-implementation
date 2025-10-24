@@ -61,17 +61,21 @@ always @(*)
 begin
     an <= 4'b1110;
     case (bcd)
-        4'b0000: seg = 7'b1000000;
-        4'b0001: seg = 7'b1111001;
-        4'b0010: seg = 7'b0100100;
-        4'b0011: seg = 7'b0110000;
-        4'b0100: seg = 7'b0011001;
-        4'b0101: seg = 7'b0010010;
-        4'b0110: seg = 7'b0000010;
-        4'b0111: seg = 7'b1111000;
-        4'b1000: seg = 7'b0000000;
-        4'b1001: seg = 7'b0010000;
-        default: seg = 7'b1111111;
+            4'b0000: seg = 7'b0000001; 
+            4'b0001: seg = 7'b1001111; 
+            4'b0010: seg = 7'b0010010; 
+            4'b0011: seg = 7'b0000110; 
+            4'b0100: seg = 7'b1001100; 
+            4'b0101: seg = 7'b0100100; 
+            4'b0110: seg = 7'b0100000; 
+            4'b0111: seg = 7'b0001111; 
+            4'b1000: seg = 7'b0000000; 
+            4'b1001: seg = 7'b0000100; 
+            4'b1010: seg = 7'b0001000; 
+            4'b1011: seg = 7'b1100000;
+            4'b1100: seg = 7'b0110001; 
+            4'b1101: seg = 7'b1000010; 
+            default: seg = 7'b1111111; 
     endcase
 end
 
@@ -103,8 +107,8 @@ set_property -dict { PACKAGE_PIN C7 IOSTANDARD LVCMOS33 } [get_ports {an[2]}]
 set_property -dict { PACKAGE_PIN A8 IOSTANDARD LVCMOS33 } [get_ports {an[3]}]
 ```
 ## FPGA Implementation Output
+![WhatsApp Image 2025-10-24 at 15 05 03_ef5c5c37](https://github.com/user-attachments/assets/fc727f35-e28d-4348-b06c-8ffcbf26dcae)
 
-<img width="782" height="540" alt="image" src="https://github.com/user-attachments/assets/6d549830-34b0-4916-9370-fc680e71f881" />
 
 
 ---
